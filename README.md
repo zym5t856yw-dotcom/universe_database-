@@ -16,3 +16,9 @@ PostgreSQL relational database modeling galaxies, stars, planets, and moons. Cre
 ## Setup
 - psql -U postgres -f universe_local.sql
 - psql -U postgres -d universe
+
+
+## Example query
+SELECT p.name AS planet, s.name AS star
+FROM planet p
+JOIN star s ON p.star_id = s.star_id;
